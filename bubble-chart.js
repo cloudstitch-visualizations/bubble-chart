@@ -104,6 +104,10 @@ function bubbleChartWidget_Draw(elem, data, settings) {
   fill = d3.scale.category20c();
 
   var Radius = settings.Radius;
+  
+  if (Radius == 'auto') {
+      
+  }
   var totalNodeCount = data.totalNodeCount;
 
   // Recompute new radius
