@@ -6,7 +6,7 @@ function bubbleChartWidget_Init(elem, treeName) {
   if (CTS && CTS.engine && CTS.engine.forrest) {
     try {
       var data = bubbleChartWidget_Data(treeName);
-      var settings = bubbleChartWidget_Settings(treeName);
+      var settings = bubbleChartWidget_Settings(elem, treeName);
       bubbleChartWidget_Draw(elem[0], data, settings);
     } catch(e) {
       console.log(e);
