@@ -14,9 +14,13 @@ function bubbleChartWidget_Init(elem, treeName) {
   }
 }
 
-function bubbleChartWidget_Settings(treeName) {
+function bubbleChartWidget_Settings(elem, treeName) {
   var settings = CTS(treeName + "|Settings!rows").nodes[0].toJson()[0];
-  settings.Radius = parseInt(settings.Radius);
+  if (settings.Radius == 'auto') {
+    settings.Radius = elem.width();
+  } else {
+    settings.Radius = parseInt(settings.Radius);
+  }
   return settings;
 }
 
@@ -104,10 +108,6 @@ function bubbleChartWidget_Draw(elem, data, settings) {
   fill = d3.scale.category20c();
 
   var Radius = settings.Radius;
-  
-  if (Radius == 'auto') {
-    Radius = elem.width();
-  }
   
   var totalNodeCount = data.totalNodeCount;
 
