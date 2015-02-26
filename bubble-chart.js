@@ -115,7 +115,7 @@ function bubbleChartWidget_Draw(elem, data, settings) {
   var vis = d3.select(elem).append("svg")
               .attr("width", settings.Radius)
               .attr("height", settings.Radius)
-              .attr("class", "bubble ");
+              .attr("class", "bubble bubble-chart-widget");
 
   // var data = {"name": "flare"};
 
