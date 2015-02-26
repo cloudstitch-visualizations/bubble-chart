@@ -18,6 +18,9 @@ function bubbleChartWidget_Settings(elem, treeName) {
   var settings = CTS(treeName + "|Settings!rows").nodes[0].toJson()[0];
   if (settings.Radius == 'auto') {
     settings.Radius = elem.width();
+    if (elem.height() < elem.width()) {
+      settings.Radius = elem.height();
+    }
   } else {
     settings.Radius = parseInt(settings.Radius);
   }
