@@ -14,7 +14,7 @@
  *
  */
 
-@gsheet bubbleChartDatasource http://cloudstitch.io/visualizations/bubble-chart/datasource/bubbleShartDatasource;
+@gsheet bubbleChartDatasource http://cloudstitch.io/visualizations/bubble-chart/datasource/bubbleChartDatasource;
 @html bubble-chart //apps.cloudstitch.io/visualizations/bubble-chart/index.html;
 @css relative(bubble-chart.css);
 @js relative(d3.min.js);
