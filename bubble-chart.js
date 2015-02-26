@@ -1,7 +1,7 @@
 function bubbleChartWidget_Init(elem, treeName) {
   // Load data
   if (typeof tree == 'undefined') {
-    treeName = 'bubbleChartWidget_Data';
+    treeName = 'bubbleChartDatasource';
   }
   if (CTS && CTS.engine && CTS.engine.forrest) {
     try {
