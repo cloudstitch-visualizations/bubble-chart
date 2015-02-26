@@ -106,7 +106,7 @@ function bubbleChartWidget_Draw(elem, data, settings) {
   var Radius = settings.Radius;
   
   if (Radius == 'auto') {
-        
+    Radius = elem.width();
   }
   
   var totalNodeCount = data.totalNodeCount;
