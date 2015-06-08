@@ -6,18 +6,18 @@
  * a page as a widget. To do so, simply include cloudstitch.js 
  * in the web page HEAD: 
  * 
- *   <script src="http://cloudstitch.io/release/cloudstitch.js></script>
+ *   <script src="http://static.cloudstitch.io/cloudstitch.js></script>
  * 
  * And then invoke the widget like this:
  *
- *   <div widget="visualizations/bubble-chart"></div>
+ *   <div widget="project-templates/bubble-chart-visualization"></div>
  *
  */
 
-@gsheet bubbleChartDatasource http://cloudstitch.io/visualizations/bubble-chart/datasource/bubbleChartDatasource;
-@html bubble-chart //apps.cloudstitch.io/visualizations/bubble-chart/index.html;
+@gsheet bubbleChartSheet http://cloudstitch.io/project-templates/bubble-chart-visualization/datasource/bubbleChartSheet;
+@html bubble-chart //apps.cloudstitch.io/project-templates/bubble-chart-visualization/widget.html;
 @css relative(bubble-chart.css);
 @js relative(d3.min.js);
 @js relative(bubble-chart.js);
 
-body|*[widget="visualizations/bubble-chart"] {"after": "bubbleChartWidget_PreInit"} :graft bubble-chart|#bubble-chart;
+body|*[widget="project-templates/bubble-chart-visualization"] {"after": "bubbleChartWidget_PreInit"} :graft bubble-chart|#bubble-chart;
